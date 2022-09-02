@@ -1,0 +1,22 @@
+.jumbotron{
+    background-color: #f04343;
+    color: #fff;
+    padding: 100px 25px;
+    margin: 100px 20px;
+    font-family: Montserrat, sans-serif;
+}
+.container1{
+    margin-bottom: 1em;
+    font-size: 18px;
+    text-align:center;
+    background-color:#fa757556
+}
+.card_text-center{
+    padding: 1em;
+    background-color: #f0595973;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+}
+.btn_btn-primary{
+    scroll-behavior:smooth;
+}

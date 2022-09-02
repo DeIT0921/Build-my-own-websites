@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "D:\\Project_file\\C++\\VSCODE"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp",
+			"CobaLinkedList.C": "cpp",
+			"stdlib.h": "c",
+			"stdio.h": "c",
+			"string.h": "c",
+			"*.tcc": "c",
+			"exception": "c",
+			"fstream": "c",
+			"istream": "c",
+			"new": "c",
+			"ostream": "c",
+			"sstream": "c",
+			"stdexcept": "c",
+			"streambuf": "c",
+			"functional": "c"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "prakscript"
+	}
+}

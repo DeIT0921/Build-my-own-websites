@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Create button to animate text -->
+    <button id="btn">Animate</button>
+    <!-- Create text to animate -->
+    <p id="text">Animate me</p>
+    <!-- Create script to animate text -->
+    <script>
+        // Create variable to store button
+        var btn = document.getElementById("btn");
+        // Create variable to store text
+        var text = document.getElementById("text");
+        // Create variable to store class
+        var className = "animated bounce";
+        // Create function to animate text
+        function animateText() {
+            // Add class to text
+            text.className = className;
+        }
+        // Create event listener to animate text
+        btn.addEventListener("click", animateText);
+    </script>
+</body>
+</html>

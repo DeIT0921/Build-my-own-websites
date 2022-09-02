@@ -1,0 +1,107 @@
+/* Color Variables */
+$color-primary: #f06292;
+$color-primary-hover: #fce4ec;
+$color-primary-dark: #ec407a;
+$color-gray100: #f9fbff;
+$color-gray150: #f4f6fb;
+$color-gray200: #eef1f6;
+$color-gray300: #e1e5ee;
+$color-gray400: #767b91;
+$color-gray500: #4f546c;
+$color-gray600: #2a324b;
+$color-gray700: #161d34;
+
+$radius: 0.2rem;
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    position:fixed;
+    width:auto;
+    box-shadow: 0 0 19px #e1e5ee;
+    &__list{
+        display:flex;
+        justify-content:flex-end;
+        align-items:center;
+        gap:2rem;
+        margin: 0 2rem;
+
+        &logo{
+            list-style:none;
+            margin-right:auto;
+            cursor:pointer;
+
+            img{
+                width:4rem;
+                transition: fill 250ms ease-in;
+
+                &:hover, &:focus{
+                    fill:$color-primary;
+                }
+            }
+        }
+
+        &item{
+            list-style:none;
+            font-weight:bold;
+            position:relative;
+            padding:1.5rem 1rem;
+            cursor:pointer;
+
+            &::after{
+                content:"";
+                width:0%;
+                height:0.3rem;
+                border-radius: $radius;
+                position: absolute;
+                left:1rem;
+                bottom:0.8rem;
+                background-color: $color-primary;
+                transition: width 200ms ease-in;
+            }
+
+            &:hover::after, &:focus::after{
+                width:80%;
+            }
+            &:hover ul, &:focus ul{
+                opacity:1;
+                visibility:visible;
+            }
+
+            &drop{
+                position:absolute;
+                top:4rem;
+                left:-1rem;
+                box-shadow: 0 0 10px $color-gray300;
+                background-color:white;
+                border-radius: $radius;
+                width:12rem;
+                padding:1rem;
+                display:flex;
+                flex-direction: column;
+                gap:0.5rem;
+                opacity:0;
+                visibility: hidden;
+                transition:opacity 200ms ease-in-out;
+                
+                li{
+                    list-style:none;
+                    padding:0.5rem 1rem;
+                    border-radius: $radius;
+                    transition:background-color 200ms ease-in-out;
+
+                    &:hover, &:focus{
+                        background-color:$color-primary-hover;
+                    }
+                }
+            }
+        }
+
+    }
+}

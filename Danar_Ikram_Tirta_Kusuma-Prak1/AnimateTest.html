@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/script.js"></script>
+    <title>Animate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <link rel="stylesheet" href="StyleTest.css">
+    
+</head>
+<body>
+    <h1>Danar Ikram Tirta Kusuma (5321600007)</h1>
+    <h2 id="test">Animation Text</h2>
+    <a href="#" onclick="dosomething()">Bounce</a>
+    <a href="#" onclick="dosomething1()">Wobble</a>
+    <a href="#" onclick="dosomething2()">Swing</a>
+    <a href="#" onclick="dosomething3()">tada</a>
+    <a href="#" onclick="dosomething4()">jello</a>
+    <a href="#" onclick="dosomething5()">bounceIn</a>
+    <a href="#" onclick="dosomething6()">bounceInDown</a>
+    <a href="#" onclick="dosomething7()">flip</a>
+    <a href="#" onclick="dosomething8()">flipInX</a>
+    <a href="#" onclick="dosomething9()">flipInY</a>
+    <a href="#" onclick="dosomething10()">heartBeat</a>
+    <a href="#" onclick="dosomething11()">shake</a>
+    <a href="#" onclick="dosomething12()">rollIn</a>
+    <a href="#" onclick="dosomething13()">rollOut</a>
+    <a href="#" onclick="dosomething14()">rubberBand</a>
+    <a href="#" onclick="dosomething15()">flash</a>
+    <button onclick="trysomething()">Change to picture</button>
+    <button onclick="trysomething1()">Change to text</button>
+    <button onclick="trysomething2()">animation slow</button>
+    <button onclick="trysomething3()">animation fast</button>
+    <button onclick="trysomething4()">animation delay</button>
+    <script type="text/javascript">
+        const buttons = document.querySelectorAll('a');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+
+                let ripples = document.createElement('span');
+                ripples.style.left = x + 'px';
+                ripples.style.top = y + 'px';
+                this.appendChild(ripples);
+
+                setTimeout(() => {
+                    ripples.remove()
+                },1000);
+            })
+        })
+        function trysomething(){
+            document.getElementById("test").innerHTML = "<img src='https://cdn.mos.cms.futurecdn.net/b32trTVFwh2mJvDhXWJnFa.jpg' height=400px size=200px class='animated jackInTheBox'>";
+        }
+        function trysomething1(){
+            document.getElementById("test").innerHTML = "<h2 class='animated jackInTheBox'>Animation Text</h2>";
+        }
+        function trysomething2(){
+            document.getElementById("test").innerHTML = "<h2 class='animated jackInTheBox slower'>Animation Text</h2>";
+        }
+        function trysomething3(){
+            document.getElementById("test").innerHTML = "<h2 class='animated jackInTheBox faster'>Animation Text</h2>";
+        }
+        function trysomething4(){
+            document.getElementById("test").innerHTML = "<h2 class='animated jackInTheBox delay-1s'>Animation Text</h2>";
+        }
+        function dosomething(){
+            document.getElementById("test").classList.add("animated", "bounce");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "bounce");
+            },1000);
+        }
+        function dosomething1(){
+            document.getElementById("test").classList.add("animated", "wobble");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "wobble");
+            },1000);
+        }
+        function dosomething2(){
+            document.getElementById("test").classList.add("animated", "swing");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "swing");
+            },1000);
+        }
+        function dosomething3(){
+            document.getElementById("test").classList.add("animated", "tada");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "tada");
+            },1000);
+        }
+        function dosomething4(){
+            document.getElementById("test").classList.add("animated", "jello");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "jello");
+            },1000);
+        }
+        function dosomething5(){
+            document.getElementById("test").classList.add("animated", "bounceIn");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "bounceIn");
+            },1000);
+        }
+        function dosomething6(){
+            document.getElementById("test").classList.add("animated", "bounceInDown");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "bounceInDown");
+            },1000);
+        }
+        function dosomething7(){
+            document.getElementById("test").classList.add("animated", "flip");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "flip");
+            },1000);
+        }
+        function dosomething8(){
+            document.getElementById("test").classList.add("animated", "flipInX");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "flipInX");
+            },1000);
+        }
+        function dosomething9(){
+            document.getElementById("test").classList.add("animated", "flipInY");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "flipInY");
+            },1000);
+        }
+        function dosomething10(){
+            document.getElementById("test").classList.add("animated", "heartBeat");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "heartBeat");
+            },1000);
+        }
+        function dosomething11(){
+            document.getElementById("test").classList.add("animated", "shake");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "shake");
+            },1000);
+        }
+        function dosomething12(){
+            document.getElementById("test").classList.add("animated", "rollIn");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "rollIn");
+            },1000);
+        }
+        function dosomething13(){
+            document.getElementById("test").classList.add("animated", "rollOut");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "rollOut");
+            },1000);
+        }
+        function dosomething14(){
+            document.getElementById("test").classList.add("animated", "rubberBand");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "rubberBand");
+            },1000);
+        }
+        function dosomething15(){
+            document.getElementById("test").classList.add("animated", "flash");
+            setTimeout(() => {
+                document.getElementById("test").classList.remove("animated", "flash");
+            },1000);
+        }
+    </script>
+    <footer class="footer">
+        <p>&copy; 2022 Danar Ikram Tirta Kusuma</p>
+    </footer>
+    
+    
+    <!--Scripts-->
+</body>
+</html>

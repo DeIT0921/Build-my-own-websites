@@ -1,0 +1,113 @@
+/* Color Variables */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  width: auto;
+  -webkit-box-shadow: 0 0 19px #e1e5ee;
+          box-shadow: 0 0 19px #e1e5ee;
+}
+
+.navbar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.navbar__listlogo {
+  list-style: none;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.navbar__listlogo img {
+  width: 4rem;
+  -webkit-transition: fill 250ms ease-in;
+  transition: fill 250ms ease-in;
+}
+
+.navbar__listlogo img:hover, .navbar__listlogo img:focus {
+  fill: #f06292;
+}
+
+.navbar__listitem {
+  list-style: none;
+  font-weight: bold;
+  position: relative;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+}
+
+.navbar__listitem::after {
+  content: "";
+  width: 0%;
+  height: 0.3rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  left: 1rem;
+  bottom: 0.8rem;
+  background-color: #f06292;
+  -webkit-transition: width 200ms ease-in;
+  transition: width 200ms ease-in;
+}
+
+.navbar__listitem:hover::after, .navbar__listitem:focus::after {
+  width: 80%;
+}
+
+.navbar__listitem:hover ul, .navbar__listitem:focus ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar__listitemdrop {
+  position: absolute;
+  top: 4rem;
+  left: -1rem;
+  -webkit-box-shadow: 0 0 10px #e1e5ee;
+          box-shadow: 0 0 10px #e1e5ee;
+  background-color: white;
+  border-radius: 0.2rem;
+  width: 12rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+
+.navbar__listitemdrop li {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.navbar__listitemdrop li:hover, .navbar__listitemdrop li:focus {
+  background-color: #fce4ec;
+}
+/*# sourceMappingURL=sample.css.map */
